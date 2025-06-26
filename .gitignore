@@ -161,10 +161,6 @@ Thumbs.db
 logs/
 *.log
 
-# Power BI files
-*.pbix
-*.pbit
-
 # Excel files (if they contain sensitive data)
 *.xlsx
 *.xls
