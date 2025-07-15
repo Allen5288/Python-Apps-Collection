@@ -62,4 +62,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Use port 8080 as default to avoid Windows port 8000 issues
+    uvicorn.run(app, host="0.0.0.0", port=8080)

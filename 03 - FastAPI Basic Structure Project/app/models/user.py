@@ -1,5 +1,6 @@
-from sqlalchemy import Boolean, Column, String, Text
+from sqlalchemy import Boolean, Column, String, Text, Integer, DateTime
 from sqlalchemy.orm import relationship
+from datetime import datetime
 
 from ..database import Base
 
@@ -8,6 +9,10 @@ class User(Base):
     """User model"""
     __tablename__ = "users"
 
+    id = Column(Integer, primary_key=True, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
     email = Column(String(255), unique=True, index=True, nullable=False)
     username = Column(String(100), unique=True, index=True, nullable=False)
     full_name = Column(String(255), nullable=True)
