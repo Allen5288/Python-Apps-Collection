@@ -57,7 +57,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 
 # `fastapi dev` sets this itself; set it here too so `uvicorn main:app` also
 # tolerates a missing frontend build dir in 23_frontend.py.
@@ -131,6 +131,13 @@ app = FastAPI(
     redoc_url=None,
     openapi_url=None,
 )
+
+
+# `fastapi dev` always prints "Documentation at /docs". The hub has no docs of its
+# own (see docs_url=None above), so send that URL to the index page instead of a 404.
+@app.get("/docs", include_in_schema=False)
+async def docs_redirect():
+    return RedirectResponse(url="/")
 
 # ---------------------------------------------------------------------------
 # 3) Mount each example at /NN. Inside the sub-app all paths stay the same
