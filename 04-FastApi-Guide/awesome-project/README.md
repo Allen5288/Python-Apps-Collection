@@ -49,6 +49,7 @@ The index page at `/` links to every example's docs.
 | 24 | `24_static_files.py` | `StaticFiles` mount, `url_for`, `FileResponse` downloads |
 | 25 | `25_testing/` | pytest + `TestClient`: headers, JSON, parametrize, fixtures, `dependency_overrides`, async client |
 | 26 | `26_debugging.py` | `uvicorn.run` under `__main__`, VS Code / PyCharm launch configs, logging |
+| 28 | `28_websockets.py` | WebSockets: rooms, broadcast, `ConnectionManager`, disconnect cleanup, `TestClient` websocket test |
 
 
 Generated at runtime and ignored by git: `database.db` (17), `log.txt` (21), `.uploads/` (09).
