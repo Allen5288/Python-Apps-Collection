@@ -49,7 +49,9 @@ The index page at `/` links to every example's docs.
 | 24 | `24_static_files.py` | `StaticFiles` mount, `url_for`, `FileResponse` downloads |
 | 25 | `25_testing/` | pytest + `TestClient`: headers, JSON, parametrize, fixtures, `dependency_overrides`, async client |
 | 26 | `26_debugging.py` | `uvicorn.run` under `__main__`, VS Code / PyCharm launch configs, logging |
+| 27 | `27_rate_limiting.py` | Token-bucket rate limiting, 5 req / 10s per client, 429 with `Retry-After` |
 | 28 | `28_websockets.py` | WebSockets: rooms, broadcast, `ConnectionManager`, disconnect cleanup, `TestClient` websocket test |
+| 29 | `29_lifespan.py` | Lifespan events: startup/shutdown with `@asynccontextmanager`, `lifespan.state`, testing with `TestClient` |
 
 
 Generated at runtime and ignored by git: `database.db` (17), `log.txt` (21), `.uploads/` (09).
