@@ -52,6 +52,7 @@ The index page at `/` links to every example's docs.
 | 27 | `27_rate_limiting.py` | Token-bucket rate limiting, 5 req / 10s per client, 429 with `Retry-After` |
 | 28 | `28_websockets.py` | WebSockets: rooms, broadcast, `ConnectionManager`, disconnect cleanup, `TestClient` websocket test |
 | 29 | `29_lifespan.py` | Lifespan events: startup/shutdown with `@asynccontextmanager`, `lifespan.state`, testing with `TestClient` |
+| 30 | `30_dependency_caching.py` | Dependency caching: `use_cache=False`, fresh values vs shared sessions |
 
 
 Generated at runtime and ignored by git: `database.db` (17), `log.txt` (21), `.uploads/` (09).
