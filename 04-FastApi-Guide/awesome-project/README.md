@@ -53,6 +53,7 @@ The index page at `/` links to every example's docs.
 | 28 | `28_websockets.py` | WebSockets: rooms, broadcast, `ConnectionManager`, disconnect cleanup, `TestClient` websocket test |
 | 29 | `29_lifespan.py` | Lifespan events: startup/shutdown with `@asynccontextmanager`, `lifespan.state`, testing with `TestClient` |
 | 30 | `30_dependency_caching.py` | Dependency caching: `use_cache=False`, fresh values vs shared sessions |
+| 31 | `31_pagination.py` | Offset pagination: `skip` / `limit` with `Query` bounds, total + `has_more` envelope, 404 for a missing item |
 
 
 Generated at runtime and ignored by git: `database.db` (17), `log.txt` (21), `.uploads/` (09).
